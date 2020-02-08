@@ -1,89 +1,107 @@
 ﻿@model Sale.Models.Producto
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Eliminar";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Delete</h2>
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>Producto</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.codigo)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.codigo)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.nombre)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.nombre)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.descripcion)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.descripcion)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.stock)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.stock)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.stockMin)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.stockMin)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.precioCosto)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.precioCosto)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.precioVenta)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.precioVenta)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.idCategoria)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.idCategoria)
-        </dd>
-
-    </dl>
-
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
-
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+<div class="">
+    <div class="page-title">
+        <div class="title_left">
+            <h3>Eliminar Producto</h3>
         </div>
-    }
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2><small>Esta seguro que desea eliminar este elemento?</small></h2>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">      
+                    <div class="form-group">
+                        <dl class="dl-horizontal">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.codigo)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.codigo)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.nombre)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.nombre)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.descripcion)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.descripcion)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.stock)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.stock)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.stockMin)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.stockMin)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.precioCosto)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.precioCosto)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.precioVenta)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.precioVenta)
+                            </dd>
+
+                            <dt>
+                                @Html.DisplayNameFor(model => model.idCategoria)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.idCategoria)
+                            </dd>
+
+                        </dl>
+                        @using (Html.BeginForm())
+                        {
+                            @Html.AntiForgeryToken()
+
+                            <div class="col-md-6 col-md-offset-3">
+                                <div style="margin:10px"></div>
+                                <button type="submit" value="Delete" class="btn btn-danger">Eliminar</button>
+                                @Html.ActionLink("Regresar", "Index", null, new { @class = "btn btn-default" })
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

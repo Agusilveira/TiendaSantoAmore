@@ -42,9 +42,9 @@
                                             <td>@Html.DisplayFor(modelItem => item.descripcion)</td>
                                             <td>@Html.DisplayFor(modelItem => item.stock)</td>
                                             <td>
-                                                <a href="@Url.Action("Edit", "Categorias", new { id = item.idProducto })" class="btn btn-sm btn-info" style="padding: 5px 10px;"><icon class="fa fa-edit"></icon> Editar</a>
-                                                <a href="@Url.Action("Details", "Categorias", new { id = item.idProducto })" class="btn btn-sm btn-success" style="padding: 5px 10px;"><icon class="fa fa-eye"></icon> Detalles</a>
-                                                <a href="@Url.Action("Delete", "Categorias", new { id = item.idProducto })" class="btn btn-sm btn-danger" style="padding: 5px 10px;"><icon class="fa fa-edit"></icon> Eliminar</a>
+                                                <a href="@Url.Action("Edit", "Productos", new { id = item.idProducto })" class="btn btn-sm btn-info" style="padding: 5px 10px;"><icon class="fa fa-edit"></icon> Editar</a>
+                                                <a href="@Url.Action("Details", "Productos", new { id = item.idProducto })" class="btn btn-sm btn-success" style="padding: 5px 10px;"><icon class="fa fa-eye"></icon> Detalles</a>
+                                                <a href="@Url.Action("Delete", "Productos", new { id = item.idProducto })" class="btn btn-sm btn-danger" style="padding: 5px 10px;"><icon class="fa fa-edit"></icon> Eliminar</a>
                                             </td>
                                         </tr>
                                         }
