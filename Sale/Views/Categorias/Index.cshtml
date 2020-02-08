@@ -1,0 +1,78 @@
+﻿@model IEnumerable<Sale.Models.Categoria>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="">
+    <div class="page-title">
+        <div class="title_left">
+            @Html.ActionLink("Nuevo", "Create", null, new { @class = "btn btn-success", @style = "margin: 9px 0;" })
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>Categorias <small>listado</small></h2>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+
+                    <table id="datatable" class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>@Html.DisplayNameFor(model => model.nombre)</th>
+                                <th>Opciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @foreach (var item in Model)
+                            {
+
+                                <tr>
+                                    <td>@Html.DisplayFor(modelItem => item.nombre)</td>
+                                    <td>
+
+                                        <a href="@Url.Action("Edit", "Categorias", new { id = item.idCategoria })" class="btn btn-sm btn-info" style="padding: 5px 10px;"><icon class="fa fa-edit"></icon> Editar</a>
+                                        <a href="@Url.Action("Details", "Categorias", new { id = item.idCategoria })" class="btn btn-sm btn-success" style="padding: 5px 10px;"><icon class="fa fa-eye"></icon> Detalles</a>
+                                        <a href="@Url.Action("Delete", "Categorias", new { id = item.idCategoria })" class="btn btn-sm btn-danger" style="padding: 5px 10px;"><icon class="fa fa-edit"></icon> Eliminar</a>
+                                    </td>
+
+                                </tr>
+
+
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+@section styles{
+
+}
+
+@section Scripts {
+
+
+    <script>
+        $(document).ready(function () {
+
+
+
+        });
+
+
+    </script>
+}
